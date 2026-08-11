@@ -1,6 +1,8 @@
 package com.ifsc.app;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    int contador=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,5 +23,14 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        Button button = findViewById(R.id.button);
+        TextView textview = findViewById(R.id.textView);
+
+        button.setOnClickListener(view -> {
+            contador++;
+            textview.setText(Integer.toString(contador));
+        });
+
     }
 }
