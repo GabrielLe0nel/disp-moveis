@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Toast.makeText(this, "onCreate", Toast.LENGTH_LONG).show();
+        Log.d("cicloDaVIda","onCreate");
 
     }
 
