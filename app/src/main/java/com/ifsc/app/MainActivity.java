@@ -3,6 +3,7 @@ package com.ifsc.app;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,11 +21,11 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    String[] nomes = new String[]{"Helena", "Livia", "Gabi 2026", "Pedro", "Romulo 2006", "Gabriel"};
-    ListView lv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -32,17 +33,6 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        lv = findViewById(R.id.listview);
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                            R.layout.item_lista,
-                            R.id.tvnome,
-                            nomes
-                );
 
-        lv.setAdapter(adapter);
-
-        lv.setOnItemClickListener((parent, view, position, id) ->{
-                Toast.makeText(this, nomes[position], Toast.LENGTH_LONG).show();
-        } );
     }
 }
