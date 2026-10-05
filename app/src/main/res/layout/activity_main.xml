@@ -7,20 +7,14 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.ifsc.app.SimplePaint
-        android:id="@+id/simplePaint"
-        android:layout_width="412dp"
-        android:layout_height="610dp"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnColor" />
-
-    <Button
-        android:id="@+id/btnColor"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Seletor de cor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
